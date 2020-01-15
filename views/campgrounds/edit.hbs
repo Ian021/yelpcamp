@@ -1,0 +1,17 @@
+
+{{>header}}
+
+<div class="container">
+<div style="width:50%;margin:35px auto;">
+    <h1 style="text-align: center;">Edit {{campground.name}}!</h1>
+        <form action="/campgrounds/{{campground._id}}/?_method=PUT" method="POST">
+        <input class="form-control mb-1" type="text" name="campground[name]" placeholder="name" value="{{campground.name}}">
+        <input class="form-control mb-1" type="text" name="campground[image]" placeholder="image url" value="{{campground.image}}">
+        <input class="form-control mb-1" type="text" name="campground[description]" placeholder="description" value="{{campground.description}}">
+        <button class="btn btn-block btn-dark mb-1">Submit</button>
+    </form>
+    <a href="/">Back to home!</a>
+</div>
+
+</div>
+{{>footer}}

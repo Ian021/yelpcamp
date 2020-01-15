@@ -1,0 +1,15 @@
+
+{{>header}}
+
+<div class="container">
+<div style="width:50%;margin:35px auto;">
+    <h1 style="text-align: center;">Add new Comment to {{body.name}}!</h1>
+    <form action="/campgrounds/{{body._id}}/comments" method="POST">
+        <input class="form-control mb-1" type="text" name="comment[text]" placeholder="text">
+        <button class="btn btn-block btn-dark mb-1">Submit</button>
+    </form>
+    <a href="/">Back to home!</a>
+</div>
+
+</div>
+{{>footer}}

@@ -1,0 +1,16 @@
+body {
+    background: lightsteelblue
+}
+
+.img-thumbnail > img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.img-thumbnail {
+    padding:0px;
+}
+
+.img-desc {
+    padding:9px;
+}

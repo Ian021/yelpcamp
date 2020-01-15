@@ -1,0 +1,17 @@
+
+{{>header}}
+
+<div class="container">
+<div style="width:50%;margin:35px auto;">
+    <h1 style="text-align: center;">Create a new Campground!</h1>
+    <form action="/campgrounds" method="POST">
+        <input class="form-control mb-1" type="text" name="campground" placeholder="name">
+        <input class="form-control mb-1" type="text" name="image" placeholder="image url">
+        <input class="form-control mb-1" type="text" name="description" placeholder="description">
+        <button class="btn btn-block btn-dark mb-1">Submit</button>
+    </form>
+    <a href="/">Back to home!</a>
+</div>
+
+</div>
+{{>footer}}
