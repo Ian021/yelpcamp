@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 5000
+
 /* ------------------------------------- LIBS -------------------------------------*/
 const mongoose        = require('mongoose');
 const express         = require('express'),
@@ -78,6 +80,4 @@ app.use(mainRoutes)
 
 /* ------------------------------------- LISTEN -------------------------------------*/
 
-app.listen(3000, function(){
-    console.log('Yelpcamp listening on port 3000!')
-})
+app.listen(PORT, () => console.log(`YelpCamp Listening on ${ PORT }`))
