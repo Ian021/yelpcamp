@@ -1,4 +1,5 @@
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
+const DB_CONNECTION_URL = process.env.DB_CONNECTION_URL
 
 /* ------------------------------------- LIBS -------------------------------------*/
 const mongoose        = require('mongoose');
@@ -14,7 +15,6 @@ const express         = require('express'),
 const commentRoutes    = require('./routes/comments'),
       campgroundRoutes = require('./routes/campgrounds'),
       mainRoutes       = require('./routes/main'),
-      credentials      = require('./credentials'),
       User             = require('./models/user');
     
 /* ------------------------------------- EXPRESS -------------------------------------*/
@@ -30,9 +30,7 @@ app.engine('hbs',hbs({extname: 'hbs'}));
 app.set('view engine', 'hbs')
 
 /* ------------------------------------- MONGOOSE -------------------------------------*/
-connectionUrl = 'mongodb+srv://'+credentials.username+':'+credentials.password+'@experiment-fr8tc.gcp.mongodb.net/yelpcamp?retryWrites=true&w=majority'
-
-mongoose.connect(connectionUrl,{
+mongoose.connect(DB_CONNECTION_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
